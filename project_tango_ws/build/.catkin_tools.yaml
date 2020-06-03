@@ -1,0 +1,6 @@
+devel_space: /home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/devel
+install: false
+install_space: /home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/install
+profile: default
+source_space: /home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/src
+workspace: /home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws
