@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/tango/project_tango/project_tango_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/build/catkin_tools_prebuild/gtest/googlemock/cmake_install.cmake")
+  include("/home/tango/project_tango/project_tango_ws/build/catkin_tools_prebuild/gtest/googlemock/cmake_install.cmake")
 
 endif()
 

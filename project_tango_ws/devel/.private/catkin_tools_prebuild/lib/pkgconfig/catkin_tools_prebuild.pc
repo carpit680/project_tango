@@ -1,4 +1,4 @@
-prefix=/home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/devel/.private/catkin_tools_prebuild
+prefix=/home/tango/project_tango/project_tango_ws/devel/.private/catkin_tools_prebuild
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild

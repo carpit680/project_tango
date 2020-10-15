@@ -1,4 +1,4 @@
-prefix=/home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/install
+prefix=/home/tango/project_tango/project_tango_ws/install
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild

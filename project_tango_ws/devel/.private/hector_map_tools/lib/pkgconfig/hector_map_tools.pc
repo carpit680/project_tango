@@ -1,0 +1,8 @@
+prefix=/home/tango/project_tango/project_tango_ws/devel/.private/hector_map_tools
+
+Name: hector_map_tools
+Description: Description of hector_map_tools
+Version: 0.4.1
+Cflags: -I/home/tango/project_tango/project_tango_ws/src/hector_slam/hector_map_tools/include -I/usr/include/eigen3
+Libs: -L${prefix}/lib 
+Requires: nav_msgs

@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
 # Source directory: /usr/src/googletest
-# Build directory: /home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/build/catkin_tools_prebuild/gtest
+# Build directory: /home/tango/project_tango/project_tango_ws/build/catkin_tools_prebuild/gtest
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

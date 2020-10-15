@@ -1,0 +1,1 @@
+/home/tango/project_tango/project_tango_ws/devel/.private/project-tango/lib/pkgconfig/project-tango.pc

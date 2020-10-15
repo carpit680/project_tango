@@ -1,65 +1,55 @@
-Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/tango/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_57922/fast && /usr/bin/make  -f CMakeFiles/cmTC_57922.dir/build.make CMakeFiles/cmTC_57922.dir/build
-make[1]: Entering directory '/home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_57922.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_57922.dir/src.c.o   -c /home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_57922
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57922.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_57922.dir/src.c.o  -o cmTC_57922 
-CMakeFiles/cmTC_57922.dir/src.c.o: In function `main':
-src.c:(.text+0x3e): undefined reference to `pthread_create'
-src.c:(.text+0x4a): undefined reference to `pthread_detach'
-src.c:(.text+0x56): undefined reference to `pthread_cancel'
-src.c:(.text+0x67): undefined reference to `pthread_join'
-src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+Run Build Command:"/usr/bin/make" "cmTC_fcb97/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fcb97.dir/build.make CMakeFiles/cmTC_fcb97.dir/build
+make[1]: Entering directory '/home/tango/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fcb97.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_fcb97.dir/CheckSymbolExists.c.o   -c /home/tango/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_fcb97
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fcb97.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_fcb97.dir/CheckSymbolExists.c.o  -o cmTC_fcb97 
+CMakeFiles/cmTC_fcb97.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x2c): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_57922.dir/build.make:106: recipe for target 'cmTC_57922' failed
-make[1]: *** [cmTC_57922] Error 1
-make[1]: Leaving directory '/home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
-Makefile:141: recipe for target 'cmTC_57922/fast' failed
-make: *** [cmTC_57922/fast] Error 2
+CMakeFiles/cmTC_fcb97.dir/build.make:97: recipe for target 'cmTC_fcb97' failed
+make[1]: *** [cmTC_fcb97] Error 1
+make[1]: Leaving directory '/home/tango/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_fcb97/fast' failed
+make: *** [cmTC_fcb97/fast] Error 2
 
-
-Source file was:
+File /home/tango/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
 #include <pthread.h>
 
-void* test_func(void* data)
+int main(int argc, char** argv)
 {
-  return data;
-}
-
-int main(void)
-{
-  pthread_t thread;
-  pthread_create(&thread, NULL, test_func, NULL);
-  pthread_detach(thread);
-  pthread_cancel(thread);
-  pthread_join(thread, NULL);
-  pthread_atfork(NULL, NULL, NULL);
-  pthread_exit(NULL);
-
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
   return 0;
+#endif
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp
+Change Dir: /home/tango/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_f074f/fast && /usr/bin/make  -f CMakeFiles/cmTC_f074f.dir/build.make CMakeFiles/cmTC_f074f.dir/build
-make[1]: Entering directory '/home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f074f.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f074f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.17/Modules/CheckFunctionExists.c
-Linking C executable cmTC_f074f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f074f.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_f074f.dir/CheckFunctionExists.c.o  -o cmTC_f074f  -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_9a44e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9a44e.dir/build.make CMakeFiles/cmTC_9a44e.dir/build
+make[1]: Entering directory '/home/tango/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9a44e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9a44e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9a44e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a44e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_9a44e.dir/CheckFunctionExists.c.o  -o cmTC_9a44e -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_f074f.dir/build.make:106: recipe for target 'cmTC_f074f' failed
-make[1]: *** [cmTC_f074f] Error 1
-make[1]: Leaving directory '/home/arpit/arpit/ros_workspaces/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
-Makefile:141: recipe for target 'cmTC_f074f/fast' failed
-make: *** [cmTC_f074f/fast] Error 2
-
+CMakeFiles/cmTC_9a44e.dir/build.make:97: recipe for target 'cmTC_9a44e' failed
+make[1]: *** [cmTC_9a44e] Error 1
+make[1]: Leaving directory '/home/tango/project_tango/project_tango_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9a44e/fast' failed
+make: *** [cmTC_9a44e/fast] Error 2
 
 

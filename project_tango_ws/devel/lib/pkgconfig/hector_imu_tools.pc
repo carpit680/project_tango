@@ -1,0 +1,1 @@
+/home/tango/project_tango/project_tango_ws/devel/.private/hector_imu_tools/lib/pkgconfig/hector_imu_tools.pc
