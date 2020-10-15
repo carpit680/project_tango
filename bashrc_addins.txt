@@ -3,3 +3,4 @@ source /opt/ros/melodic/setup.bash
 source /home/tango/project_tango/project_tango_ws/devel/setup.bash                                      
 python /home/tango/project_tango/scroll_display.py &                                                    
 python /home/tango/project_tango/listen_for_shutdown.py &    
+python /home/tango/project_tango/listen_for_restart.py &
