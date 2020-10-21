@@ -9,6 +9,6 @@ type sudo crontab -e
 export ROS_MASTER_URI=http://zephyrus:11311                                                             
 source /opt/ros/melodic/setup.bash                                                                      
 source ~/project_tango/project_tango_ws/devel/setup.bash                                      
-python ~/project_tango/scroll_display.py &                                                    
-python ~/project_tango/listen_for_shutdown.py &    
-python ~/project_tango/listen_for_restart.py &
+sudo python ~/project_tango/scroll_display.py &                                                    
+sudo python ~/project_tango/listen_for_shutdown.py &    
+sudo python ~/project_tango/listen_for_restart.py &
