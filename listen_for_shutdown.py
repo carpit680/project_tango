@@ -3,7 +3,7 @@
 import I2C_LCD_driver
 from time import *
 import RPi.GPIO as GPIO
-import subprocess
+import os
 import fcntl
 import struct
 
@@ -18,4 +18,4 @@ mylcd.lcd_display_string(str_pad,1)
 sleep(.35)
 mylcd.lcd_display_string("Goodbye fam...",2)
 sleep(1)
-subprocess.call(['shutdown', 'now'], shell=False)
+os.system("sudo shutdown now")
