@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="tango" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find tango_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find tango_description)/urdf/tango.trans" />
+<xacro:include filename="$(find tango_description)/urdf/tango.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.16178693932823193 -0.13386554524140667 0.11034012029652868"/>
+    <mass value="1.2222199022669344"/>
+    <inertia ixx="0.012663" ixy="0.00086" ixz="0.000171" iyy="0.010559" iyz="-0.000482" izz="0.018404"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://tango_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://tango_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+</robot>
