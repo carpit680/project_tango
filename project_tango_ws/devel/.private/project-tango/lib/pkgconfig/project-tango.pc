@@ -1,8 +1,0 @@
-prefix=/home/tango/project_tango/project_tango_ws/devel/.private/project-tango
-
-Name: project-tango
-Description: Description of project-tango
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/tango/project_tango/project_tango_ws/install
-
-Name: hector_imu_tools
-Description: Description of hector_imu_tools
-Version: 0.4.1
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

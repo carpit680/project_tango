@@ -1,6 +1,0 @@
-devel_space: /home/tango/project_tango/project_tango_ws/devel
-install: false
-install_space: /home/tango/project_tango/project_tango_ws/install
-profile: default
-source_space: /home/tango/project_tango/project_tango_ws/src
-workspace: /home/tango/project_tango/project_tango_ws

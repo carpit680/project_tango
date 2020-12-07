@@ -1,8 +1,0 @@
-prefix=/home/tango/project_tango/project_tango_ws/devel/.private/hector_nav_msgs
-
-Name: hector_nav_msgs
-Description: Description of hector_nav_msgs
-Version: 0.4.1
-Cflags: -I/home/tango/project_tango/project_tango_ws/devel/.private/hector_nav_msgs/include
-Libs: -L${prefix}/lib 
-Requires: nav_msgs geometry_msgs message_runtime

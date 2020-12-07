@@ -1,1 +1,0 @@
-/home/tango/project_tango/project_tango_ws/devel/.private/hector_nav_msgs/share/gennodejs/ros/hector_nav_msgs/srv/GetRecoveryInfo.js
