@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<robot name="tango" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find tango_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find tango_description)/urdf/tango.trans" />
+<xacro:include filename="$(find tango_description)/urdf/tango.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.16178693932823193 -0.1338655452414066 0.11034012029652868"/>
+    <mass value="1.222219902266934"/>
+    <inertia ixx="0.012663" ixy="0.00086" ixz="0.000171" iyy="0.010559" iyz="-0.000482" izz="0.018404"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://tango_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://tango_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_right_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.001378146385077439 -3.803152259784781e-08 2.701640913968517e-07"/>
+    <mass value="0.5465183547417778"/>
+    <inertia ixx="0.001184" ixy="-0.0" ixz="-0.0" iyy="0.000606" iyz="-0.0" izz="0.000606"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.320255 0.152026 -0.056187"/>
+    <geometry>
+      <mesh filename="package://tango_description/meshes/wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.320255 0.152026 -0.056187"/>
+    <geometry>
+      <mesh filename="package://tango_description/meshes/wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_left_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0013779841244327354 -3.8031565174900805e-08 2.7018644199044983e-07"/>
+    <mass value="0.5465183547417778"/>
+    <inertia ixx="0.001184" ixy="-0.0" ixz="-0.0" iyy="0.000606" iyz="0.0" izz="0.000606"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.013525 0.152026 -0.056387"/>
+    <geometry>
+      <mesh filename="package://tango_description/meshes/wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.013525 0.152026 -0.056387"/>
+    <geometry>
+      <mesh filename="package://tango_description/meshes/wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="right_rev" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.320255 -0.152026 0.056187"/>
+  <parent link="base_link"/>
+  <child link="wheel_right_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="left_rev" type="continuous">
+  <origin rpy="0 0 0" xyz="0.013525 -0.152026 0.056387"/>
+  <parent link="base_link"/>
+  <child link="wheel_left_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+</robot>

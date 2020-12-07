@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<robot name="tango" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="right_rev_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_rev">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="right_rev_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="left_rev_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_rev">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="left_rev_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>
