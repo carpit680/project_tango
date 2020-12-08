@@ -16,6 +16,7 @@
   <arg default="$(find tango_description)/launch/urdf.rviz" name="rvizconfig"/>
   <param command="$(find xacro)/xacro $(arg model)" name="robot_description"/>
   <param name="use_gui" value="$(arg gui)"/>
+  
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
   <node args="-d $(arg rvizconfig)" name="rviz" pkg="rviz" required="true" type="rviz"/>
@@ -25,5 +26,5 @@
     <param name="scale_angular" value="1.5" type="double"/>
     <!-- <remap from="cmd_vel" to="robot0/cmd_vel"/> -->
   </node>
-  
+
 </launch>
