@@ -2,8 +2,16 @@
 <robot name="tango" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:include filename="$(find tango_description)/urdf/materials.xacro" />
+<!-- <xacro:include filename="$(find tango_description)/urdf/macros.xacro" /> -->
 <xacro:include filename="$(find tango_description)/urdf/tango.trans" />
 <xacro:include filename="$(find tango_description)/urdf/tango.gazebo" />
+
+<macro name="cylinder_inertia" params="mass r l">
+  <inertia  ixx="${mass*(3*r*r+l*l)/12}" ixy = "0" ixz = "0"
+            iyy="${mass*(3*r*r+l*l)/12}" iyz = "0"
+            izz="${mass*(r*r)/2}" />
+</macro>
+
 <link name="base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.16178693932823193 -0.1338655452414066 0.11034012029652868"/>
@@ -15,13 +23,36 @@
     <geometry>
       <mesh filename="package://tango_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="white"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
       <mesh filename="package://tango_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
+  </collision>
+</link>
+
+<link name="sensor_laser">
+  <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1" />
+      <xacro:cylinder_inertia mass="1" r="0.033" l="0.02" />
+  </inertial>
+
+  <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+      <cylinder radius="0.033" length="0.02"/>
+      </geometry>
+      <material name="blue" />
+  </visual>
+
+  <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+      <cylinder radius="0.033" length="0.02"/>
+      </geometry>
   </collision>
 </link>
 
@@ -36,7 +67,7 @@
     <geometry>
       <mesh filename="package://tango_description/meshes/wheel_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.320255 0.152026 -0.056187"/>
@@ -57,7 +88,7 @@
     <geometry>
       <mesh filename="package://tango_description/meshes/wheel_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.013525 0.152026 -0.056387"/>
@@ -66,6 +97,14 @@
     </geometry>
   </collision>
 </link>
+
+
+
+<joint name="joint_sensor_laser" type="fixed">
+    <origin xyz="-0.153 -0.150 0.210" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="sensor_laser"/>
+</joint>
 
 <joint name="right_rev" type="continuous">
   <origin rpy="0 0 0" xyz="-0.320255 -0.152026 0.056187"/>
