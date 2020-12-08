@@ -19,4 +19,4 @@ Use the following command to launch Tango in a maze world with RPLidar sensor.
 
 ```roslaunch tango_description display.launch```
 
-## Maintainer : _[carpit680](https://gitlab.com/carpit680)_
+## Maintainer : _[Arpit Chauhan](https://github.com/carpit680)_
