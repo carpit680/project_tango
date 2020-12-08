@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+  <model name='tag3'>
+    <static>true</static>
+    <link name="tag3_link">
+
+        <visual name="visual_ar_tag3">
+        <geometry>
+                <mesh>
+                    <uri>model://tag3/meshes/tag3.dae</uri>
+                </mesh>
+            </geometry>
+        </visual>
+         <collision name="collision_ar_tag3">
+                <geometry>
+                <mesh>
+			<uri>model://tag3/meshes/tag3.dae</uri>
+                </mesh>
+            </geometry>
+        </collision>
+
+    </link>
+  </model>
+</sdf>
+~                                        

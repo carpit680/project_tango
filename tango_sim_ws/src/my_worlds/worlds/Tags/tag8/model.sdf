@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+  <model name='tag8'>
+    <static>true</static>
+    <link name="tag8_link">
+
+        <visual name="visual_ar_tag8">
+        <geometry>
+                <mesh>
+                    <uri>model://tag8/meshes/tag8.dae</uri>
+                </mesh>
+            </geometry>
+        </visual>
+         <collision name="collision_ar_tag8">
+                <geometry>
+                <mesh>
+                    <uri>model://tag8/meshes/tag8.dae</uri>
+                </mesh>
+            </geometry>
+        </collision>
+
+    </link>
+  </model>
+</sdf>
+~                                        

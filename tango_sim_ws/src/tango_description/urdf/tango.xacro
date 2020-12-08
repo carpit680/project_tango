@@ -2,7 +2,6 @@
 <robot name="tango" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:include filename="$(find tango_description)/urdf/materials.xacro" />
-<!-- <xacro:include filename="$(find tango_description)/urdf/macros.xacro" /> -->
 <xacro:include filename="$(find tango_description)/urdf/tango.trans" />
 <xacro:include filename="$(find tango_description)/urdf/tango.gazebo" />
 

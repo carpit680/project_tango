@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>my_worlds</name>
+  <version>0.0.1</version>
+  <description>The my_worlds package contains all the worlds that can be used with Project Tango.</description>
+  <maintainer email="carpit680@gmail.com">Arpit Chauhan</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <exec_depend>rospy</exec_depend>
+
+  <export>
+  </export>
+</package>
