@@ -8,4 +8,6 @@ tango_sim_ws/logs/
 tango_sim_ws/devel/
 tango_sim_ws/.catkin_tools/
 
-__pycache__
+__pycache__/
+files/tango_render.png:Zone.Identifier
+scripts/I2C_LCD_driver.pyc

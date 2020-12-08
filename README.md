@@ -1,4 +1,4 @@
-![Project Tango](tango_render.png)
+![Project Tango](files/tango_render.png)
 # Project Tango source code repository 
 
 ## Description:
