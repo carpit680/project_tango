@@ -1,7 +1,7 @@
-project_tango_ws/build/
-project_tango_ws/logs/
-project_tango_ws/devel/
-project_tango_ws/.catkin_tools/
+control_ws/build/
+control_ws/logs/
+control_ws/devel/
+control_ws/.catkin_tools/
 
 tango_sim_ws/build/
 tango_sim_ws/logs/
