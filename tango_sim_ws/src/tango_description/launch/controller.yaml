@@ -5,11 +5,11 @@ tango_controller:
     publish_rate: 50
 
   # Position Controllers --------------------------------------
-  right_rev_position_controller:
+  Rev15_position_controller:
     type: effort_controllers/JointPositionController
-    joint: right_rev
+    joint: Rev15
     pid: {p: 100.0, i: 0.01, d: 10.0}
-  left_rev_position_controller:
+  Rev16_position_controller:
     type: effort_controllers/JointPositionController
-    joint: left_rev
+    joint: Rev16
     pid: {p: 100.0, i: 0.01, d: 10.0}

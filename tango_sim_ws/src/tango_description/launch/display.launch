@@ -3,7 +3,7 @@
   <param command="$(find xacro)/xacro $(find tango_description)/urdf/tango.xacro" name="robot_description"/>
   <node args="-param robot_description -urdf -Y 1.57 -model tango" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find my_worlds)/worlds/maze.world"/>
+    <!-- <arg name="world_name" value="$(find my_worlds)/worlds/maze.world"/> -->
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
@@ -24,7 +24,6 @@
   <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen">
     <param name="scale_linear" value="0.5" type="double"/>
     <param name="scale_angular" value="1.5" type="double"/>
-    <!-- <remap from="cmd_vel" to="robot0/cmd_vel"/> -->
   </node>
 
 </launch>

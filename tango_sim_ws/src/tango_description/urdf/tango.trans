@@ -1,23 +1,23 @@
 <?xml version="1.0" ?>
 <robot name="tango" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<transmission name="right_rev_tran">
+<transmission name="Rev15_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="right_rev">
+  <joint name="Rev15">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="right_rev_actr">
+  <actuator name="Rev15_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="left_rev_tran">
+<transmission name="Rev16_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="left_rev">
+  <joint name="Rev16">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="left_rev_actr">
+  <actuator name="Rev16_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
