@@ -2,6 +2,7 @@ control_ws/build/
 control_ws/logs/
 control_ws/devel/
 control_ws/.catkin_tools/
+control_ws/pkg.rosinstall
 
 tango_sim_ws/build/
 tango_sim_ws/logs/
@@ -15,3 +16,4 @@ files/tango_render.png:Zone.Identifier
 scripts/I2C_LCD_driver.pyc
 .vscode/
 build/
+.catkin_workspace

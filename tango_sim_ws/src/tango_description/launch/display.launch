@@ -21,9 +21,9 @@
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
   <node args="-d $(arg rvizconfig)" name="rviz" pkg="rviz" required="true" type="rviz"/>
 
-  <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen">
+  <!-- <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen">
     <param name="scale_linear" value="0.5" type="double"/>
     <param name="scale_angular" value="1.5" type="double"/>
-  </node>
+  </node> -->
 
 </launch>
