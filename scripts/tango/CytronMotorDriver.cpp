@@ -16,10 +16,10 @@ CytronMD::CytronMD(MODE mode, uint8_t pin1, uint8_t pin2)
 void CytronMD::setSpeed(int16_t speed)
 {
   // Make sure the speed is within the limit.
-  if (speed > 255) {
-    speed = 255;
-  } else if (speed < -255) {
-    speed = -255;
+  if (speed > 1023) {
+    speed = 1023;
+  } else if (speed < -1023) {
+    speed = -1023;
   }
   
   // Set the speed and direction.
