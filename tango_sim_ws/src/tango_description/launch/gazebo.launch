@@ -1,4 +1,4 @@
-<launch>
+<!--launch>
   <param command="$(find xacro)/xacro $(find tango_description)/urdf/tango.xacro" name="robot_description"/>
   <node args="-param robot_description -urdf -model tango" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -8,4 +8,20 @@
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
   </include>
-</launch>
+</launch-->
+
+<launch>
+  
+  <param command="$(find xacro)/xacro $(find tango_description)/urdf/tango.xacro" name="robot_description"/>
+  <node args="-param robot_description -urdf -Y -1.57 -model tango" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+     <arg name="world_name" value="$(find my_worlds)/worlds/maze.world"/> 
+    <!-- <arg name="world_name" value="$(find my_worlds)/worlds/obstacle.world"/> -->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  
+  </launch>

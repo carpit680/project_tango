@@ -5,11 +5,11 @@
 <xacro:include filename="$(find tango_description)/urdf/tango.trans" />
 <xacro:include filename="$(find tango_description)/urdf/tango.gazebo" />
 
-<macro name="cylinder_inertia" params="mass r l">
+<xacro:macro name="cylinder_inertia" params="mass r l">
   <inertia  ixx="${mass*(3*r*r+l*l)/12}" ixy = "0" ixz = "0"
             iyy="${mass*(3*r*r+l*l)/12}" iyz = "0"
             izz="${mass*(r*r)/2}" />
-</macro>
+</xacro:macro>
 
 <link name="base_link">
   <inertial>
