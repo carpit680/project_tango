@@ -1,15 +1,3 @@
-<!--launch>
-  <param command="$(find xacro)/xacro $(find tango_description)/urdf/tango.xacro" name="robot_description"/>
-  <node args="-param robot_description -urdf -model tango" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
-  <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="paused" value="true"/>
-    <arg name="use_sim_time" value="true"/>
-    <arg name="gui" value="true"/>
-    <arg name="headless" value="false"/>
-    <arg name="debug" value="false"/>
-  </include>
-</launch-->
-
 <launch>
   
   <param command="$(find xacro)/xacro $(find tango_description)/urdf/tango.xacro" name="robot_description"/>
@@ -24,4 +12,4 @@
     <arg name="debug" value="false"/>
   </include>
   
-  </launch>
+</launch>
