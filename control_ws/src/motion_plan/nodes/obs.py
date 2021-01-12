@@ -13,7 +13,7 @@ def clbk_laser(msg):
         'fright': min(min(msg.ranges[144:287]), 10),
         'front':  min(min(msg.ranges[288:431]), 10),
         'fleft':  min(min(msg.ranges[432:575]), 10),
-        'left':   min(min(msg.ranges[573:713]), 10),
+        'left':   min(min(msg.ranges[576:713]), 10),
     }
 
     take_action(regions)
@@ -27,7 +27,7 @@ def take_action(regions):
 
     if regions['front'] > 1 and regions['fleft'] > 1 and regions['fright'] > 1:
         state_description = 'case 1 - nothing'
-        linear_x = 0.3
+        linear_x = 0.6
         angular_z = 0
     elif regions['front'] < 1 and regions['fleft'] > 1 and regions['fright'] > 1:
         state_description = 'case 2 - front'
@@ -46,7 +46,7 @@ def take_action(regions):
         linear_x = 0
         angular_z = 0.3
     elif regions['front'] < 1 and regions['fleft'] < 1 and regions['fright'] > 1:
-        state_description = 'case 3 - front and fleft'
+        state_description = 'case 6 - front and fleft'
         linear_x = 0
         angular_z = -0.3
     elif regions['front'] < 1 and regions['fleft'] < 1 and regions['fright'] < 1:
@@ -65,7 +65,7 @@ def take_action(regions):
     msg.linear.x = linear_x
     msg.angular.z = angular_z
     pub.publish(msg)
-       
+
 def main():
     global pub
 
