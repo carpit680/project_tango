@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+Icon=/home/arpit/ros/project_tango/files/tango_render.png
+Exec=bash -c "source /opt/ros/melodic/setup.sh;source /home/arpit/ros/project_tango/tango_sim_ws/devel/setup.sh;roslaunch tango_description tango.launch"
+Name=Tango
