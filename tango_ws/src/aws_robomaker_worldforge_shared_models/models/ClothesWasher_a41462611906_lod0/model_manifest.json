@@ -1,0 +1,22 @@
+{
+  "Name": "ClothesWasher_a41462611906_lod0",
+  "Source": "17_ClothesWasher",
+  "Timestamp": 1592570898,
+  "BoundingBox": {
+    "MinPoint": {
+      "x": -0.30020439624786377,
+      "y": -0.3833118677139282,
+      "z": -3.0056799715794114e-08
+    },
+    "MaxPoint": {
+      "x": 0.30052828788757324,
+      "y": 0.2918051779270172,
+      "z": 0.8506714701652527
+    }
+  },
+  "Type": "washing-machines",
+  "Category": "washing-machines",
+  "Width": 0.600732684135437,
+  "Length": 0.6751170456409454,
+  "Orientation": 4.71238898038469
+}

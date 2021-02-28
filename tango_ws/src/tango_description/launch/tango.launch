@@ -1,16 +1,25 @@
 <launch>
   
   <!--### Launch robot model and world in gazebo### -->
+  <!-- Set WORLD_ID to default_world if worldId envvar is not defined,
+       default_world should refer to a default world during exporting process for worldforge
+  -->
+  <arg name="worldId" default="$(optenv WORLD_ID generation_vcmjltr6nh36_world_1)" doc="WorldId to load"/>
+
   <param command="$(find xacro)/xacro $(find tango_description)/urdf/tango.xacro" name="robot_description"/>
   <node args="-param robot_description -urdf -Y -1.57 -model tango" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <!-- <arg name="world_name" value="$(find my_worlds)/worlds/maze.world"/>  -->
-    <arg name="world_name" value="$(find my_worlds)/worlds/obstacle.world"/>
-    <arg name="paused" value="false"/>
+    <!-- <arg name="world_name" value="$(find my_worlds)/worlds/obstacle.world"/> -->
+    <arg name="world_name" value="$(find aws_robomaker_worldforge_worlds)/worlds/$(arg worldId)/$(arg worldId).world"/>
     <arg name="use_sim_time" value="true"/>
+    <!-- Always set GUI to false for AWS RoboMaker Simulation
+       Use gui:=true on roslaunch command-line to run with a gui.-->
     <arg name="gui" value="true"/>
-    <arg name="headless" value="false"/>
-    <arg name="debug" value="false"/>
+    <arg name="verbose" default="true"/>
+    <!-- <arg name="paused" value="false"/> -->
+    <!-- <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/> -->
   </include>
 
   <!-- ###For Rviz### -->

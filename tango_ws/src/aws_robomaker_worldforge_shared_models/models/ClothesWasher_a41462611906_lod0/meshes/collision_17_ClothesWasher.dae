@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+
+    <created>2020-05-25T11:23:03</created>
+    <modified>2020-05-25T11:23:03</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="_4_-_Default">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.5882353 0.5882353 0.5882353 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.5882353 0.5882353 0.5882353 1</color>
+            </diffuse>
+            <specular>
+              <color>0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float>9.999999</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <opacity_type sid="opacity_type" type="int">0</opacity_type>
+            <falloff_type sid="falloff_type" type="int">0</falloff_type>
+            <falloff sid="falloff" type="float">0</falloff>
+            <index_of_refraction sid="index_of_refraction" type="float">1.5</index_of_refraction>
+            <wire_size sid="wire_size" type="float">1</wire_size>
+            <wire_units sid="wire_units" type="int">0</wire_units>
+            <apply_reflection_dimming sid="apply_reflection_dimming" type="bool">0</apply_reflection_dimming>
+            <dim_level sid="dim_level" type="float">0</dim_level>
+            <reflection_level sid="reflection_level" type="float">3</reflection_level>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_texture_lock sid="ambient_diffuse_texture_lock" type="bool">1</ambient_diffuse_texture_lock>
+            <ambient_diffuse_lock sid="ambient_diffuse_lock" type="bool">1</ambient_diffuse_lock>
+            <diffuse_specular_lock sid="diffuse_specular_lock" type="bool">0</diffuse_specular_lock>
+            <use_self_illum_color sid="use_self_illum_color" type="bool">0</use_self_illum_color>
+            <self_illumination sid="self_illumination" type="float">0</self_illumination>
+            <specular_level sid="specular_level" type="float">0</specular_level>
+            <soften sid="soften" type="float">0.1</soften>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="_4_-_Default-material" name="_4_-_Default">
+      <instance_effect url="#_4_-_Default"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-UCX_SM_clothes_washer" name="UCX_SM_clothes_washer">
+      <mesh>
+        <source id="geom-UCX_SM_clothes_washer-positions">
+          <float_array id="geom-UCX_SM_clothes_washer-positions-array" count="72">-30.0198 -34.54675 0 30.02013 -34.54675 0 -30.0198 29.18051 0 30.02013 29.18051 0 -30.0198 -34.54675 85.06715 30.02013 -34.54675 85.06715 -30.0198 29.18052 85.06715 30.02013 29.18052 85.06715 -23.23657 -34.54674 23.95912 22.68448 -34.54674 23.95912 -23.23657 -34.54675 69.88013 22.68448 -34.54675 69.88013 -23.23657 -38.33118 23.95913 22.68448 -38.33118 23.95913 -23.23657 -38.33119 69.88013 22.68448 -38.33119 69.88013 15.51505 -34.54675 74.28822 15.51505 -34.54675 79.85364 21.07159 -34.54675 79.85364 21.07159 -34.54675 74.28822 15.51505 -38.33119 74.28822 21.07159 -38.33119 74.28822 21.07159 -38.33119 79.85364 15.51505 -38.33119 79.85364</float_array>
+          <technique_common>
+            <accessor source="#geom-UCX_SM_clothes_washer-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-UCX_SM_clothes_washer-normals">
+          <float_array id="geom-UCX_SM_clothes_washer-normals-array" count="252">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 -0.9999999 8.96867e-8 0 -1 8.96867e-8 0 -1 8.96867e-8 0 -1 8.96867e-8 0 -0.9999999 8.96867e-8 0 -1 8.96867e-8 0.9999999 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 0 0.9999999 -8.96867e-8 0 1 -8.96867e-8 0 1 -8.96867e-8 0 1 -8.96867e-8 0 0.9999999 -8.96867e-8 0 1 -8.96867e-8 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 1 1.66142e-7 0 1 1.66142e-7 0 1 1.66142e-7 0 1 1.66142e-7 0 -1 -8.30709e-8 0 -1 -8.30709e-8 0 -1 -8.30709e-8 0 -1 -8.30709e-8 0 -5.03997e-7 -0.9999999 0 -5.03997e-7 -1 0 -5.03997e-7 -0.9999999 0 -5.03997e-7 -1 1 0 0 0.9999999 0 0 0.9999999 0 0 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 0 0.9999999 1.37086e-6 0 1 1.37086e-6 0 0.9999999 1.37086e-6 0 1 1.37086e-6 0 -0.9999999 -6.85429e-7 0 -1 -6.85429e-7 0 -0.9999999 -6.85429e-7 0 -1 -6.85429e-7 0 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 1 0 0 1 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-UCX_SM_clothes_washer-normals-array" count="84" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-UCX_SM_clothes_washer-map1">
+          <float_array id="geom-UCX_SM_clothes_washer-map1-array" count="216">1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 1 0 0 1 1 0 0 1 0 0 0 0 0 0 0 1 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 1 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-UCX_SM_clothes_washer-map1-array" count="72" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-UCX_SM_clothes_washer-vertices">
+          <input semantic="POSITION" source="#geom-UCX_SM_clothes_washer-positions"/>
+        </vertices>
+        <triangles material="_4_-_Default_1" count="36">
+          <input semantic="VERTEX" source="#geom-UCX_SM_clothes_washer-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-UCX_SM_clothes_washer-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-UCX_SM_clothes_washer-map1" offset="2" set="0"/>
+          <p>1 0 1 0 1 0 3 2 3 0 3 0 2 4 2 3 5 3 7 6 7 6 7 6 4 8 4 7 9 7 4 10 4 5 11 5 5 12 11 4 13 10 0 14 8 5 15 11 0 16 8 1 17 9 7 18 15 5 19 14 1 20 12 7 21 15 1 22 12 3 23 13 6 24 19 7 25 18 3 26 16 6 27 19 3 28 16 2 29 17 4 30 23 6 31 22 2 32 20 4 33 23 2 34 20 0 35 21 8 36 24 10 37 26 11 38 27 11 38 27 9 39 25 8 36 24 12 40 28 13 41 29 15 42 31 15 42 31 14 43 30 12 40 28 8 44 32 9 45 33 13 46 35 13 46 35 12 47 34 8 44 32 9 48 36 11 49 37 15 50 39 15 50 39 13 51 38 9 48 36 11 52 40 10 53 41 14 54 43 14 54 43 15 55 42 11 52 40 10 56 44 8 57 45 12 58 47 12 58 47 14 59 46 10 56 44 16 60 48 17 61 49 18 62 50 18 62 50 19 63 51 16 60 48 20 64 52 21 65 53 22 66 54 22 66 54 23 67 55 20 64 52 16 68 56 19 69 57 21 70 58 21 70 58 20 71 59 16 68 56 19 72 60 18 73 61 22 74 62 22 74 62 21 75 63 19 72 60 18 76 64 17 77 65 23 78 66 23 78 66 22 79 67 18 76 64 17 80 68 16 81 69 20 82 70 20 82 70 23 83 71 17 80 68</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-UCX_SM_clothes_washer" name="UCX_SM_clothes_washer">
+        <instance_geometry url="#geom-UCX_SM_clothes_washer">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="_4_-_Default_1" target="#_4_-_Default-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+            <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+            <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+            <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

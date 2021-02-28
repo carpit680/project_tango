@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>aws_robomaker_worldforge_shared_models</name>
+  <version>1.0.0</version>
+  <description>
+    AWS RoboMaker WorldForge package containing models shared between worlds.
+  </description>
+  <license>Proprietary</license>
+  <author email="aws-robotics-simulation-maintainers@amazon.com">AWS Robotics Simulation Maintainers</author>
+  <maintainer email="aws-robotics-simulation-maintainers@amazon.com">AWS Robotics Simulation Maintainers</maintainer>
+  <buildtool_depend condition="$ROS_VERSION == 1">catkin</buildtool_depend>
+  <buildtool_depend condition="$ROS_VERSION == 2">ament_cmake</buildtool_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo</exec_depend>
+  <export>
+    <build_type condition="$ROS_VERSION == 1">catkin</build_type>
+    <build_type condition="$ROS_VERSION == 2">ament_cmake</build_type>
+    <gazebo_ros gazebo_media_path="${prefix}" gazebo_model_path="${prefix}/models"/>
+  </export>
+</package>
