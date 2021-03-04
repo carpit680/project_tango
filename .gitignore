@@ -4,6 +4,9 @@ tango_ws/devel/
 tango_ws/.catkin_tools/
 tango_ws/.tango_description/
 tango_ws/src/tango_description/build/
+tango_ws/bundle/
+tango_ws/install/
+tango_ws/log/
 
 __pycache__/
 files/tango_render.png:Zone.Identifier

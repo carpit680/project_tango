@@ -20,6 +20,7 @@ if(catkin_FOUND)
   catkin_package()
 
   install(DIRECTORY models DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+  
 elseif(ament_cmake_FOUND)
   find_package(gazebo_ros REQUIRED)
 
