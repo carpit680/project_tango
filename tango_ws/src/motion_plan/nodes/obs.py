@@ -6,6 +6,7 @@ from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
 
 pub = None
+SAFE_DISTANCE = 0.4
 
 def clbk_laser(msg):
     regions = {
@@ -25,43 +26,43 @@ def take_action(regions):
 
     state_description = ''
 
-    if regions['front'] > 1 and regions['fleft'] > 1 and regions['fright'] > 1:
+    if regions['front'] > SAFE_DISTANCE and regions['fleft'] > SAFE_DISTANCE and regions['fright'] > SAFE_DISTANCE:
         state_description = 'case 1 - nothing'
-        linear_x = 0.6
+        linear_x = 0.5
         angular_z = 0
-    elif regions['front'] < 1 and regions['fleft'] > 1 and regions['fright'] > 1:
+    elif regions['front'] < SAFE_DISTANCE and regions['fleft'] > SAFE_DISTANCE and regions['fright'] > SAFE_DISTANCE:
         state_description = 'case 2 - front'
         linear_x = 0
-        angular_z = 0.3
-    elif regions['front'] > 1 and regions['fleft'] > 1 and regions['fright'] < 1:
+        angular_z = 0.6
+    elif regions['front'] > SAFE_DISTANCE and regions['fleft'] > SAFE_DISTANCE and regions['fright'] < SAFE_DISTANCE:
         state_description = 'case 3 - fright'
         linear_x = 0
-        angular_z = 0.3
-    elif regions['front'] > 1 and regions['fleft'] < 1 and regions['fright'] > 1:
+        angular_z = 0.6
+    elif regions['front'] > SAFE_DISTANCE and regions['fleft'] < SAFE_DISTANCE and regions['fright'] > SAFE_DISTANCE:
         state_description = 'case 4 - fleft'
         linear_x = 0
-        angular_z = -0.3
-    elif regions['front'] < 1 and regions['fleft'] > 1 and regions['fright'] < 1:
+        angular_z = -0.6
+    elif regions['front'] < SAFE_DISTANCE and regions['fleft'] > SAFE_DISTANCE and regions['fright'] < SAFE_DISTANCE:
         state_description = 'case 5 - front and fright'
         linear_x = 0
-        angular_z = 0.3
-    elif regions['front'] < 1 and regions['fleft'] < 1 and regions['fright'] > 1:
+        angular_z = 0.6
+    elif regions['front'] < SAFE_DISTANCE and regions['fleft'] < SAFE_DISTANCE and regions['fright'] > SAFE_DISTANCE:
         state_description = 'case 6 - front and fleft'
         linear_x = 0
-        angular_z = -0.3
-    elif regions['front'] < 1 and regions['fleft'] < 1 and regions['fright'] < 1:
+        angular_z = -0.6
+    elif regions['front'] < SAFE_DISTANCE and regions['fleft'] < SAFE_DISTANCE and regions['fright'] < SAFE_DISTANCE:
         state_description = 'case 7 - front and fleft and fright'
         linear_x = 0
-        angular_z = 0.3
-    elif regions['front'] > 1 and regions['fleft'] < 1 and regions['fright'] < 1:
+        angular_z = 0.6
+    elif regions['front'] > SAFE_DISTANCE and regions['fleft'] < SAFE_DISTANCE and regions['fright'] < SAFE_DISTANCE:
         state_description = 'case 8 - fleft and fright'
         linear_x = 0
-        angular_z = 0.3
+        angular_z = 0.6
     else:
         state_description = 'unknown case'
         rospy.loginfo(regions)
 
-    rospy.loginfo(state_description)
+    # rospy.loginfo(state_description)
     msg.linear.x = linear_x
     msg.angular.z = angular_z
     pub.publish(msg)
