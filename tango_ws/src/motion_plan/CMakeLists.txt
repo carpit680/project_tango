@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(motion_plan)
 
-add_compile_options(-std=c++11)
+if(CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+  add_rostest(test/obs_test.test)
+endif()
 
 find_package(
 	catkin REQUIRED COMPONENTS
@@ -24,11 +27,14 @@ catkin_install_python(
 	  nodes/keyboard.py
 	  nodes/obs.py
 	  nodes/reading_laser.py
+	  nodes/test_obs.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 install(
-	DIRECTORY launch
+	DIRECTORY 
+	launch
+	test
 	DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 

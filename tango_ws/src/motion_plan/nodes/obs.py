@@ -1,7 +1,6 @@
 #! /usr/bin/env python
-
+#%%
 import rospy
-
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
 
@@ -71,12 +70,10 @@ def main():
     global pub
 
     rospy.init_node('reading_laser')
-
     pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
-
     sub = rospy.Subscriber('/tango/laser/scan', LaserScan, clbk_laser)
-
     rospy.spin()
-
+    
 if __name__ == '__main__':
     main()
+

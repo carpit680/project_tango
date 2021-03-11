@@ -7,6 +7,8 @@ tango_ws/src/tango_description/build/
 tango_ws/bundle/
 tango_ws/install/
 tango_ws/log/
+tango_ws/src/motion_plan/nodes/.ipynb_checkpoints
+tango_ws/src/motion_plan/nodes/obs.pyc
 
 __pycache__/
 files/tango_render.png:Zone.Identifier

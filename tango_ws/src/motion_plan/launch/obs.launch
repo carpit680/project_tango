@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-
+  
   <!-- ###Launch obstacle avoidance node here### -->
   <node pkg="motion_plan" type="obs.py" name="obs"  output="screen">
   </node>

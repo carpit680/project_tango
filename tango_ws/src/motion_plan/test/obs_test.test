@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <include file="$(find tango_description)/launch/tango.launch" />
+   <!-- ###Include launch file for obstacle avoidance### -->
+  <include file="$(find motion_plan)/launch/obs.launch"/>
+
+  <test test-name="obs_node_test" pkg="motion_plan" type="test_obs.py"/>
+  
+</launch>
