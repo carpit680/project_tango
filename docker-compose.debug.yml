@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  projecttango:
+    image: projecttango
+    build:
+      context: .
+      dockerfile: ./Dockerfile
